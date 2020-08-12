@@ -49,7 +49,17 @@ public class PostRepository {
         return ALL_POSTS;
     }
 
+    /*We need to complete that method by adding a for-each loop that checks if each
+    Post in ALL_POSTS has an id equal to the id parameter.
+    If so, return the current Post. After the loop, return null by default.
+    */
+
     public Post findById(Long id) {
+
+        for (Post post : ALL_POSTS){
+            if (post.getId() == id) return post;
+        }
+
         return null;
     }
 }
